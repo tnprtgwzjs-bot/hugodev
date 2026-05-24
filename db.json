@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "hash": "$2a$10$y9OpNKHwauxezDeGkd6Hk.lTjpOng1hLpGb9kB2pFsPcgyXA16eD."
+    }
+  ],
+  "cuadrantes": [],
+  "eventos": [
+    {
+      "id": 1779646996002,
+      "personId": null,
+      "personName": "Hugo Mart",
+      "role": "Vigilante",
+      "building": "Castellana 33",
+      "start": "2026-04-29",
+      "end": "2026-04-29",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "title": "Vigilante Hugo Mart",
+      "duration": 8
+    },
+    {
+      "id": 1779647783974,
+      "personId": null,
+      "personName": "Martinez Gomez",
+      "role": "Auxiliar",
+      "building": "Archivo Alcobendas",
+      "start": "2026-05-12",
+      "end": "2026-05-12",
+      "startTime": "11:11",
+      "endTime": "12:11",
+      "title": "Auxiliar Martinez Gomez",
+      "duration": 1
+    },
+    {
+      "id": 1779647801827,
+      "personId": null,
+      "personName": "Jdawdaw",
+      "role": "Auxiliar",
+      "building": "Archivo Alcobendas",
+      "start": "2026-05-06",
+      "end": "2026-05-06",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "title": "Auxiliar Jdawdaw",
+      "duration": 8
+    },
+    {
+      "id": 1779647821543,
+      "personId": null,
+      "personName": "hugo",
+      "role": "Auxiliar",
+      "building": "Archivo Alcobendas",
+      "start": "2026-05-01",
+      "end": "2026-05-01",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "title": "Auxiliar hugo",
+      "duration": 8
+    },
+    {
+      "id": 1779647842509,
+      "personId": 1,
+      "personName": "dwadwadwa",
+      "role": "Vigilante",
+      "building": "Castellana 33",
+      "start": "2026-05-01",
+      "end": "2026-05-01",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "title": "Vigilante dwadwadwa",
+      "duration": 8
+    },
+    {
+      "id": 1779647851714,
+      "personId": 2,
+      "personName": "Mdawgersrsdgse",
+      "role": "Vigilante",
+      "building": "Castellana 33",
+      "start": "2026-05-07",
+      "end": "2026-05-07",
+      "startTime": "08:00",
+      "endTime": "16:00",
+      "title": "Vigilante Mdawgersrsdgse",
+      "duration": 8
+    }
+  ],
+  "facturacion": [],
+  "plantilla": []
+}

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HugoDev Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-panel">
+        <div class="brand-logo">H</div>
+        <div>
+          <strong>HugoDev</strong>
+          <span>Control de Servicios</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="sidebar-item active" data-page="dashboard"><span>Dashboard</span></button>
+        <button class="sidebar-item" data-page="eventos"><span>Eventos</span></button>
+        <button class="sidebar-item" data-page="cuadrantes"><span>Cuadrantes</span></button>
+        <button class="sidebar-item" data-page="empleados"><span>Empleados</span></button>
+        <button class="sidebar-item" data-page="puestos"><span>Puestos</span></button>
+        <button class="sidebar-item" data-page="recordatorios"><span>Recordatorios</span></button>
+        <button class="sidebar-item" data-page="notificaciones"><span>Notificaciones</span></button>
+        <button class="sidebar-item" data-page="exportaciones"><span>Exportaciones</span></button>
+        <button class="sidebar-item" data-page="usuarios"><span>Usuarios</span></button>
+        <button class="sidebar-item" data-page="configuracion"><span>Configuración</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="btn-logout" class="logout-button">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <header class="app-topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Resumen general</p>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn">🔍</button>
+          <button class="icon-btn">🔔<span class="badge">3</span></button>
+          <button class="icon-btn">🌙</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="page active-page">
+        <div class="summary-grid">
+          <article class="summary-card">
+            <div class="summary-card-title">Eventos activos</div>
+            <div class="summary-card-value">3</div>
+            <a href="#" data-page="eventos">Ver todos</a>
+          </article>
+          <article class="summary-card">
+            <div class="summary-card-title">Empleados activos</div>
+            <div class="summary-card-value">58</div>
+            <a href="#">Ver empleados</a>
+          </article>
+          <article class="summary-card">
+            <div class="summary-card-title">Horas hoy</div>
+            <div class="summary-card-value">1.248 h</div>
+            <a href="#">Ver informe</a>
+          </article>
+          <article class="summary-card">
+            <div class="summary-card-title">Servicios hoy</div>
+            <div class="summary-card-value">12</div>
+            <a href="#">Ver cuadrante</a>
+          </article>
+          <article class="summary-card alert-card">
+            <div class="summary-card-title">Alertas</div>
+            <div class="summary-card-value">5</div>
+            <a href="#">Ver todas</a>
+          </article>
+        </div>
+
+        <div class="dashboard-layout">
+          <section class="schedule-card card-panel">
+            <div class="schedule-header">
+              <div>
+                <h2>Cuadrante - Festival Madrid 2026</h2>
+                <span>21 - 27 de mayo 2026</span>
+              </div>
+              <div class="schedule-actions">
+                <button class="small-btn">Hoy</button>
+                <button class="small-btn active">Semana</button>
+                <button class="small-btn">Mes</button>
+                <button class="small-btn primary">+ Servicio</button>
+              </div>
+            </div>
+            <div class="schedule-table">
+              <div class="schedule-row schedule-row-head">
+                <div class="schedule-cell schedule-cell-name"></div>
+                <div class="schedule-cell">Lun 21</div>
+                <div class="schedule-cell">Mar 22</div>
+                <div class="schedule-cell">Mié 23</div>
+                <div class="schedule-cell">Jue 24</div>
+                <div class="schedule-cell">Vie 25</div>
+                <div class="schedule-cell">Sáb 26</div>
+                <div class="schedule-cell">Dom 27</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-cell name-cell"><strong>Juan Pérez</strong><span>Vigilante</span></div>
+                <div class="schedule-cell colored blue">08:00 - 16:00<br>Control Acceso</div>
+                <div class="schedule-cell colored blue">16:00 - 00:00<br>Control Acceso</div>
+                <div class="schedule-cell colored blue">08:00 - 16:00<br>Control Acceso</div>
+                <div class="schedule-cell colored purple">16:00 - 00:00<br>VIP</div>
+                <div class="schedule-cell colored blue">08:00 - 16:00<br>Control Acceso</div>
+                <div class="schedule-cell colored blue">16:00 - 00:00<br>Control Acceso</div>
+                <div class="schedule-cell">—</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-cell name-cell"><strong>María García</strong><span>Vigilante</span></div>
+                <div class="schedule-cell colored green">08:00 - 16:00<br>Parking</div>
+                <div class="schedule-cell">—</div>
+                <div class="schedule-cell colored yellow">16:00 - 00:00<br>Parking</div>
+                <div class="schedule-cell colored green">08:00 - 16:00<br>Parking</div>
+                <div class="schedule-cell colored green">16:00 - 00:00<br>Parking</div>
+                <div class="schedule-cell colored green">08:00 - 16:00<br>Parking</div>
+                <div class="schedule-cell colored green">16:00 - 00:00<br>Parking</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-cell name-cell"><strong>Luis Rodríguez</strong><span>Vigilante</span></div>
+                <div class="schedule-cell colored pink">16:00 - 00:00<br>VIP</div>
+                <div class="schedule-cell colored pink">08:00 - 16:00<br>VIP</div>
+                <div class="schedule-cell colored pink">16:00 - 00:00<br>VIP</div>
+                <div class="schedule-cell colored pink">08:00 - 16:00<br>VIP</div>
+                <div class="schedule-cell colored pink">16:00 - 00:00<br>VIP</div>
+                <div class="schedule-cell colored pink">08:00 - 16:00<br>VIP</div>
+                <div class="schedule-cell colored pink">08:00 - 16:00<br>VIP</div>
+              </div>
+            </div>
+            <div class="schedule-key">
+              <span class="key-chip blue">Control Acceso</span>
+              <span class="key-chip green">Parking</span>
+              <span class="key-chip purple">VIP</span>
+              <span class="key-chip red">Proveedores</span>
+              <span class="key-chip yellow">CCTV</span>
+              <span class="key-chip teal">Rondas</span>
+              <span class="key-chip orange">Recepción</span>
+              <span class="key-chip pink">Backstage</span>
+            </div>
+          </section>
+
+          <aside class="right-sidebar">
+            <div class="card-panel mini-panel">
+              <div class="panel-title">Próximos eventos</div>
+              <ul class="panel-list">
+                <li><strong>Festival Madrid 2026</strong><span>22 - 25 mayo 2026</span></li>
+                <li><strong>Concierto Rockland</strong><span>05 - 06 junio 2026</span></li>
+                <li><strong>Partido Final Cup</strong><span>12 junio 2026</span></li>
+              </ul>
+            </div>
+            <div class="card-panel mini-panel">
+              <div class="panel-title">Recordatorios</div>
+              <ul class="panel-list">
+                <li><span class="dot red"></span><strong>TIP caduca</strong><span>María García - 15/06/2026</span></li>
+                <li><span class="dot orange"></span><strong>DNI caduca</strong><span>Luis Rodríguez - 20/06/2026</span></li>
+                <li><span class="dot yellow"></span><strong>Contrato por renovar</strong><span>Ana Sánchez - 01/07/2026</span></li>
+                <li><span class="dot green"></span><strong>Reconocimiento médico</strong><span>Carlos Ruiz - 10/06/2026</span></li>
+              </ul>
+            </div>
+            <div class="card-panel mini-panel">
+              <div class="panel-title">Actividad reciente</div>
+              <ul class="panel-list">
+                <li><strong>Cuadrante actualizado</strong><span>Hace 2 h</span></li>
+                <li><strong>Nuevo evento creado</strong><span>Hace 5 h</span></li>
+                <li><strong>3 servicios modificados</strong><span>Hace 1 día</span></li>
+                <li><strong>Nuevo empleado añadido</strong><span>Hace 3 días</span></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="eventos" class="page hidden-page card-panel">
+        <div class="eventos-header">
+          <div>
+            <h2>Gestión de turnos</h2>
+            <p>Añade turnos de Vigilante y Auxiliar directamente desde el calendario para 2026.</p>
+          </div>
+          <div class="eventos-controls">
+            <label>
+              Filtrar mes 2026
+              <select id="eventos-month"></select>
+            </label>
+            <label>
+              Rol
+              <select id="eventos-role">
+                <option value="Vigilante">Vigilante</option>
+                <option value="Auxiliar">Auxiliar</option>
+              </select>
+            </label>
+            <label>
+              Empleado
+              <select id="eventos-person"></select>
+            </label>
+          </div>
+        </div>
+
+        <div class="eventos-summary card-panel">
+          <div>
+            <div class="event-summary-label">Empleado activo</div>
+            <strong id="selected-staff-name">Selecciona Vigilante o Auxiliar</strong>
+          </div>
+          <div>
+            <div class="event-summary-label">Horas este mes</div>
+            <strong id="monthly-hours">0</strong>
+          </div>
+          <div class="event-actions">
+            <button id="btn-add-shift" class="small-btn primary">Añadir turno</button>
+            <button id="btn-clear-eventos" class="small-btn">Borrar turnos</button>
+          </div>
+        </div>
+
+        <div id="eventos-calendar" class="eventos-calendar"></div>
+
+        <div class="evento-list card-panel">
+          <h3>Turnos del mes</h3>
+          <div id="eventos-list" class="panel-list"></div>
+        </div>
+      </section>
+
+      <section id="cuadrantes" class="page hidden-page card-panel">
+        <h2>Cuadrantes</h2>
+        <p>Crear cuadrantes, asignar personal y gestionar turnos.</p>
+      </section>
+
+      <section id="empleados" class="page hidden-page card-panel">
+        <h2>Empleados</h2>
+        <p>Listado y gestión de empleados.</p>
+      </section>
+
+      <section id="puestos" class="page hidden-page card-panel">
+        <h2>Puestos</h2>
+        <p>Definición de puestos y responsabilidades.</p>
+      </section>
+
+      <section id="recordatorios" class="page hidden-page card-panel">
+        <h2>Recordatorios</h2>
+        <p>Alertas y renovaciones próximas.</p>
+      </section>
+
+      <section id="notificaciones" class="page hidden-page card-panel">
+        <h2>Notificaciones</h2>
+        <p>Notificaciones del sistema y alertas.</p>
+      </section>
+
+      <section id="exportaciones" class="page hidden-page card-panel">
+        <h2>Exportaciones</h2>
+        <p>Exporta cuadros y facturas a PDF / Excel.</p>
+      </section>
+
+      <section id="usuarios" class="page hidden-page card-panel">
+        <h2>Usuarios</h2>
+        <p>Administración de usuarios y permisos.</p>
+      </section>
+
+      <section id="configuracion" class="page hidden-page card-panel">
+        <h2>Configuración</h2>
+        <p>Ajustes generales del sistema.</p>
+      </section>
+    </main>
+  </div>
+
+  <div id="shift-modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-card-header">
+        <div>
+          <h3>Nuevo turno</h3>
+          <p>Añade hora, nombre, rol y edificio.</p>
+        </div>
+        <button id="shift-close" class="link">✖</button>
+      </div>
+      <div class="modal-body">
+        <div class="field-group">
+          <label>Fecha</label>
+          <div id="shift-date" class="field-display"></div>
+        </div>
+        <div class="field-group">
+          <label>Empleado</label>
+          <select id="shift-person">
+            <option value="">Personalizado</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Nombre y apellidos</label>
+          <input id="shift-name" type="text" placeholder="Nombre y apellidos" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Rol</label>
+            <select id="shift-role">
+              <option>Vigilante</option>
+              <option>Auxiliar</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label>Edificio</label>
+            <select id="shift-building">
+              <option>Castellana 33</option>
+              <option>Archivo Alcobendas</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Hora de inicio</label>
+            <input id="shift-start" type="time" value="08:00" />
+          </div>
+          <div class="field-group">
+            <label>Hora de fin</label>
+            <input id="shift-end" type="time" value="16:00" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button id="shift-save" class="small-btn primary">Guardar turno</button>
+        <button id="shift-cancel" class="small-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
